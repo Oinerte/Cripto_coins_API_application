@@ -236,3 +236,19 @@ body{
     margin-bottom: 45%;
 
 }
+
+#button-show{
+    margin-left: 37%;
+    margin-top: -20%;
+}
+#button{
+    width: 30vw;
+    height: 40px;
+    border-radius: 10px;
+    border: none;
+    background-color: #FFB742;
+    color: #2B2A2A;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor:pointer ;
+}
