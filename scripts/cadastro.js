@@ -28,4 +28,5 @@ function registerUser(register){
     })
     return user
 }
-console.log(registerUser({nome: 'tutu', username:'arthur', senha: '123', cep:'esse numero aq', rua: 'essa msm', numero:'aquele lá', uf: 'acre', bairro:'de nos todos', cidade:'de deus' }));
+
+export { registerUser }

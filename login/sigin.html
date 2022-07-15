@@ -67,11 +67,17 @@
                 <h2 class="Writting-index">JÁ TERMINOU?<span><a href="" class="span-sigin">ENTRAR</a></span></h2> 
             </div>
 
-            <script>
-                let inputs = {nome:nome.value,cep:cep.value,uf:uf.value,username:username.value,rua:rua.value,cidade:cidade.value,senha:senha.value,numero:numero.value,bairro:bairro.value}
 
-            </script>
         </form>
     </div> 
+    <script type="module">
+        import {pesquisacep} from './cep.js'
+        document.querySelector('#cep').addEventListener('blur', (event)=>{
+            let input = document.querySelector('#cep')
+            pesquisacep(input.value)
+        })
+        let inputs = {nome:nome.value,cep:cep.value,uf:uf.value,username:username.value,rua:rua.value,cidade:cidade.value,senha:senha.value,numero:numero.value,bairro:bairro.value}
+
+    </script>
 </body>
 </html>

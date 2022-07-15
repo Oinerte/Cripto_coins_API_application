@@ -19,7 +19,6 @@ function meu_callback(conteudo) {
 }
     
 function pesquisacep(valor) {
-
     var cep = valor.replace(/\D/g, '');
 
     if (cep != "") {
@@ -33,11 +32,8 @@ function pesquisacep(valor) {
             document.getElementById('cidade').value="...";
             document.getElementById('uf').value="...";
 
-            var script = document.createElement('script');
+            fetch('https://viacep.com.br/ws/'+ cep +'/json').then(responde => responde.json()).then(response => meu_callback(response))
 
-            script.src = 'https://viacep.com.br/ws/'+ cep + '/json/?callback=meu_callback';
-
-            document.body.appendChild(script);
 
         } 
         else {
@@ -50,4 +46,4 @@ function pesquisacep(valor) {
     }
 };
 
-export {pesquisacep}
+export { pesquisacep }
