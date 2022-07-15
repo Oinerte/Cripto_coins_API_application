@@ -236,3 +236,9 @@ body{
     margin-bottom: 45%;
 
 }
+
+.svg-icon{
+    width: 10px;
+    height: 10px;
+    box-shadow: 5px 5px 2px #0f0f0f;
+}
