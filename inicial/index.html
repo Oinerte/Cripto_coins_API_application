@@ -61,11 +61,11 @@
                     <p>BUSD</p>
                 </div>
                 <div id="precos" class="precos espacamentoTabela">
-                    <p id="homePage_bitcoin_price" onload="updatePrice('Bitcoin')"></p>
-                    <p id="homePage_ethereum_price" onload="updatePrice('Ethereum')"></p>
-                    <p id="homePage_tether_price" onload="updatePrice('Tether')"></p>
-                    <p id="homePage_usdcoin_price" onload="updatePrice('Usdcoin')"></p>
-                    <p id="homePage_bnb_price" onload="updatePrice('Bnb')"></p>
+                    <p id="homePage_bitcoin_price">?????????????????</p>
+                    <p id="homePage_ethereum_price">?????????????????</p>
+                    <p id="homePage_tether_price">?????????????????</p>
+                    <p id="homePage_usdcoin_price">????????????????</p>
+                    <p id="homePage_bnb_price">?????????????????</p>
                 </div>
 
 
@@ -98,18 +98,18 @@
                         <p>10</p>
                     </div>
                     <div id="coin-name2" class="coin-name2 espacamentoTabela2">
-                        <p>BITCOIN</p>
-                        <p>ETHERUM</p>
-                        <p>BUSD </p>
-                        <p>BNB <img src="" alt=""></p>
-                        <p>BUSD <img src="" alt=""></p>
+                        <p>XRP</p>
+                        <p>Cardano</p>
+                        <p>Solana</p>
+                        <p>HEX <img src="" alt=""></p>
+                        <p>Dogecoin<img src="" alt=""></p>
                     </div>
                     <div id="precos" class="precos2 espacamentoTabela2">
-                        <p>110.717,28BRL</p>
-                        <p>110.717,28BRL</p>
-                        <p>110.717,28BRL</p>
-                        <p>110.717,28BRL</p>
-                        <p>110.717,28BRL</p>
+                        <p id="moeda6">?????????????????</p>
+                        <p id="moeda7">?????????????????</p>
+                        <p id="moeda8">?????????????????</p>
+                        <p id="moeda9">?????????????????</p>
+                        <p id="moeda10">?????????????????</p>
                     </div>
 
 
@@ -134,18 +134,28 @@
         </div>
     </div>
 
-</div>
-</div>
-</div>
-</div>
-</div>
+
 
 <script src="../scripts/menu.js"></script>
     <script type="module">
         import { coinsInformation } from './bits.js'
-        document.querySelector('#botãoTeste').addEventListener('click',()=>{
-            coinsInformation().then(response => response.json()).then(response => console.log(response[0]))
-        })
+        window.onload = ()=>{
+            coinsInformation().then(response => response.json()).then(response => slapora(response))
+        }
+    function slapora (arr){
+        document.querySelector('#homePage_bitcoin_price').innerHTML = arr[0].price
+        document.querySelector('#homePage_ethereum_price').innerHTML = arr[1].price
+        document.querySelector('#homePage_tether_price').innerHTML = arr[2].price
+        document.querySelector('#homePage_usdcoin_price').innerHTML = arr[3].price
+        document.querySelector('#homePage_bnb_price').innerHTML = arr[4].price
+        document.querySelector('#moeda6').innerHTML = arr[6].price
+        document.querySelector('#moeda7').innerHTML = arr[7].price
+        document.querySelector('#moeda8').innerHTML = arr[8].price
+        document.querySelector('#moeda9').innerHTML = arr[9].price
+        document.querySelector('#moeda10').innerHTML = arr[10].price
+
+
+    }
     </script>
 </body>
 </html>
