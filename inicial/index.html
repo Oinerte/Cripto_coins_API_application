@@ -77,7 +77,7 @@
                     <a href=""><button class="modal-button-quantity" onclick="openModal()">🛒</button></a>
                 </div>
 
-                <button onclick="updatePrice('Bitcoin')" class="button-test"> Testando funcion updatePrice</button>
+                <button id="botãoTeste" class="button-test"> Testando funcion updatePrice</button>
                 <div class="text1">
                     <div id="indice2" class="indice2 espacamentoTabela3">
                         <p>6</p>
@@ -119,7 +119,7 @@
 </div>
 </div>
 
-<a href=""><button class="modal-button-quantity" onclick="openModal()">ADIDICONAR</button></a>
+<!-- <a href=""><button class="modal-button-quantity" onclick="openModal()">ADIDICONAR</button></a>
 
 <div id="modal-block">
 <div id="modal-popup-page">
@@ -130,9 +130,13 @@
 </div>
 </div>
 
-</div>
-<script src="../../sripts/menu.js"></script>
-    <script src="../../sripts/menu.js"></script>
+</div> -->
+<script src="../scripts/menu.js"></script>
+    <script type="module">
+        import { coinsInformation } from './bits.js'
+        document.querySelector('#botãoTeste').addEventListener('click',()=>{
+            coinsInformation().then(response => response.json()).then(response => console.log(response[0]))
+        })
+    </script>
 </body>
-
 </html>
