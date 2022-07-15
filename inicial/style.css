@@ -103,7 +103,7 @@ body{
     background-color: rgb(65, 65, 65);
     border-radius: 10px;
     padding: 3%;
-        left: 27vw;
+        left: 28vw;
     text-align: center;
     }
 
@@ -123,7 +123,11 @@ body{
 
 
 .espacamentoTabela5{
-    margin:auto auto 8% auto
+ margin-top: 20px;
+}
+
+.espacamentoTabela6{
+    margin-top:20px;
 }
 .title{
     color: #fff;
@@ -167,7 +171,7 @@ body{
 }
 .infos{
     display: flex;
-    width: 40vw;
+    width: 0vw;
 }
 .indice{
     color: #FFB742;
@@ -200,7 +204,7 @@ body{
 
 .modal-button-quantity{
     width: 1.8vw;
-    margin-bottom: 15%;
+    margin-bottom: 25%;
     background-color: rgba(255, 255, 255, 0);
     border-style: none;
     font-size: larger;
@@ -226,22 +230,9 @@ body{
     
 }
 
-#modal-block{
-    width: 100vw;
-    position: fixed;
-    top: 5vh;
-    z-index: 999;
-    justify-content: center;
-}
 
-
-#modal-popup-page{
-    display: flex;
-    flex-direction: column;
-    padding: 2%;
-    background-color: #040404f5;
-    border-radius: 10px;
-    width: 30vw;
-    margin: 20vh auto ;
+.input-modal{
+    width: 0.8vw;
+    margin-bottom: 45%;
 
 }
