@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscrição</title>
+    <link rel="stylesheet" href="sigin.css">
+</head>
+<body>
+
+    <div id="central-block">
+        <h1>VAMOS CADASTRAR SEU PERFIL?</h1>
+
+        <form action="#" id="form-div">
+
+            <div class="input-group">
+                <div class="input-box">
+                    <label for="firstname">INSIRA UM NOME E SOBRENOME:</label>
+                    <input id="nome" type="text"  required>
+                </div>
+
+                <div class="input-box">
+                    <label >INSIRA SEU CEP:</label>
+                    <input id="cep" type="text" required>
+                </div>
+                <div class="input-box">
+                    <label >UF:</label>
+                    <input id="uf" type="text" required>
+                </div>
+
+                <div class="input-box">
+                    <label>INSIRA UM USUÁRIO</label>
+                    <input id="username" type="text"  required>
+                </div>
+
+                <div class="input-box">
+                    <label>INSIRA SUA RUA:</label>
+                    <input id="rua" type="text" required>
+                </div>
+
+                <div class="input-box">
+                    <label>CIDADE:</label>
+                    <input id="cidade" type="text"  required>
+                </div>
+
+                <div class="input-box">
+                    <label>INSIRA UMA SENHA:</label>
+                    <input id="senha" type="password"   required>
+                </div>
+                <div class="input-box">
+                    <label >NÚMERO RESIDÊNCIA:</label>
+                    <input id="numero" type="text"  required>
+                </div>
+                <div class="input-box">
+                    <label>BAIRRO:</label>
+                    <input id="bairro" type="text" name="password" required>
+                </div>
+                <div class="input-box">
+                    <label >INSIRA A SENHA NOVAMENTE:</label>
+                    <input id="input-passwd2" type="password" name="password"  required>
+                </div>
+
+                <div id="button-sigin"><a href=""><button id="button" onblur="registerUser(inputs)">CADASTRAR</button></a></div>
+
+
+                <h2 class="Writting-index">JÁ TERMINOU?<span><a href="" class="span-sigin">ENTRAR</a></span></h2> 
+            </div>
+
+            <script>
+                let inputs = {nome:nome.value,cep:cep.value,uf:uf.value,username:username.value,rua:rua.value,cidade:cidade.value,senha:senha.value,numero:numero.value,bairro:bairro.value}
+
+            </script>
+        </form>
+    </div> 
+</body>
+</html>
