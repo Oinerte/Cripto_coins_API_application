@@ -54,11 +54,11 @@
                     <p>5</p>
                 </div>
                 <div id="coin-name" class="coin-name espacamentoTabela">
-                    <img src="" alt="" class="svg-icon"> <p>BITCOIN</p>
-                    <img src="" alt="" class="svg-icon"> <p>ETHEREUM</p>
-                    <img src="" alt="" class="svg-icon"> <p>BUSD</p>
-                    <img src="" alt="" class="svg-icon"> <p>BNB</p>
-                    <img src="" alt="" class="svg-icon"> <p>BUSD</p>
+                    <img src="" alt="" id="img1" class="svg-icon"> <p>BITCOIN</p>
+                    <img src="" alt="" id="img2"class="svg-icon"> <p>ETHEREUM</p>
+                    <img src="" alt="" id="img3"class="svg-icon"> <p>BUSD</p>
+                    <img src="" alt="" id="img4"class="svg-icon"> <p>BNB</p>
+                    <img src="" alt="" id="img5"class="svg-icon"> <p>BUSD</p>
                 </div>
                 <div id="precos" class="precos espacamentoTabela">
                     <p id="homePage_bitcoin_price">?????????????????</p>
@@ -98,11 +98,11 @@
                         <p>10</p>
                     </div>
                     <div id="coin-name2" class="coin-name2 espacamentoTabela2">
-                        <img src="" alt="" class="svg-icon"></p>  <p>XRP</p>
-                        <img src="" alt="" class="svg-icon"></p>  <p>CARDANO</p>
-                        <img src="" alt="" class="svg-icon"></p> <p>SOLANA</p>
-                        <img src="" alt="" class="svg-icon"></p> <p>HEX 
-                            <img src="" alt="" class="svg-icon"></p> <p>DOGECOIN </p>
+                        <img src="" alt="" id="img6"class="svg-icon"></p>  <p>XRP</p>
+                        <img src="" alt="" id="img7"class="svg-icon"></p>  <p>CARDANO</p>
+                        <img src="" alt="" id="img8"class="svg-icon"></p> <p>SOLANA</p>
+                        <img src="" alt="" id="img9"class="svg-icon"></p> <p>HEX 
+                        <img src="" alt="" id="img10"class="svg-icon"></p> <p>DOGECOIN </p>
                     </div>
                     <div id="precos" class="precos2 espacamentoTabela2">
                         <p id="moeda6">?????????????????</p>
@@ -153,8 +153,16 @@
         document.querySelector('#moeda8').innerHTML = arr[8].price
         document.querySelector('#moeda9').innerHTML = arr[9].price
         document.querySelector('#moeda10').innerHTML = arr[10].price
-
-
+        document.querySelector('img1').setAttribute(src, arr[0].iconUrl)
+        document.querySelector('img2').setAttribute(src, arr[1].iconUrl)
+        document.querySelector('img3').setAttribute(src, arr[2].iconUrl)
+        document.querySelector('img4').setAttribute(src, arr[3].iconUrl)
+        document.querySelector('img5').setAttribute(src, arr[4].iconUrl)
+        document.querySelector('img6').setAttribute(src, arr[6].iconUrl)
+        document.querySelector('img7').setAttribute(src, arr[7].iconUrl)
+        document.querySelector('img8').setAttribute(src, arr[8].iconUrl)
+        document.querySelector('img9').setAttribute(src, arr[9].iconUrl)
+        document.querySelector('img10').setAttribute(src, arr[10].iconUrl)
     }
     </script>
 </body>
