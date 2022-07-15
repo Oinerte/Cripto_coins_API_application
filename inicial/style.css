@@ -4,7 +4,7 @@
 } 
 
 body{
-    background-color: #2B2A2A;
+    background-color: #212529;
     font-family: "Inter";
     }
 
@@ -12,6 +12,12 @@ body{
     font-family: 'Inter', sans-serif;
     
 }
+
+img{
+    display: inline;
+}
+
+
 #menu{
     width: 35px;
     height: 30px;
@@ -93,22 +99,25 @@ body{
 .change{
     display: block;
 }
+
+
     .container{
     width: 100vw;
     height: 100vh;
     }
     .box{
     position: relative;
-    width: 40vw;
-    background-color: rgb(65, 65, 65);
+    width: 90vw;
+    height: 35vh;
+    background-color: rgba(65, 65, 65, 0.11);
     border-radius: 10px;
     padding: 3%;
-        left: 28vw;
+    margin: 10vh auto auto auto;
     text-align: center;
     }
 
 .espacamentoTabela{
-    margin: 0 20px 50px 10px;
+    margin: 0 2vw 2vh 2vw;
 }
 .espacamentoTabela2{
     margin: 0 30px 50px 1px;
@@ -141,23 +150,13 @@ body{
 }
 .text1{
     display: flex;
-    margin: 0 35px;
+    margin: 0 19%; 
 }
 .text2{
     display: flex;
-    margin: 0 60px;
+    margin: 0 0%;
 }
-.title-coins{
-    margin: 16px;
-    color: #FFB742; 
-    display: flex;
-}
-.title-coins2{
-    margin: 16px;
-    color: #FFB742; 
-    display: flex;
-    margin: 0 10px;
-}
+
 .txt1{
     display: flex;
     margin: 0 94px ;
@@ -171,17 +170,22 @@ body{
 }
 .infos{
     display: flex;
-    width: 0vw;
+    width: 30vw;
+    margin-left: 5%;
+
 }
 .indice{
     color: #FFB742;
+ 
 }
 
 .indice2{
     color: #FFB742;
+   
 }
 .precos{
-    color: rgb(185, 185, 185);
+    color: #FFB742;
+    text-decoration: underline;
 }
 .coin-name{
     color: rgb(185, 185, 185);
@@ -195,8 +199,9 @@ body{
     margin-left: 10%;
 }
 .precos2{
-    color: rgb(185, 185, 185);
+    color:#FFB742;
     margin-left: 5%;
+    text-decoration: underline;
 }
 .img{
     height: 4vh;
@@ -211,6 +216,7 @@ body{
     cursor: pointer;
     box-shadow: 2px 2px 3px #0000001c;
     color: #2B2A2A;
+    margin-left: 50%;
    
     
 }
@@ -240,5 +246,5 @@ body{
 .svg-icon{
     width: 30px;
     height: 30px;
-
+    
 }
