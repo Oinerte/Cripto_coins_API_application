@@ -1,0 +1,247 @@
+@font-face {
+    font-family: "inter";
+    src: url(../../fonts/Inter-VariableFont_slnt\,wght.ttf);
+} 
+
+body{
+    background-color: #2B2A2A;
+    font-family: "Inter";
+    }
+
+*{
+    font-family: 'Inter', sans-serif;
+    
+}
+#menu{
+    width: 35px;
+    height: 30px;
+    margin: 30px 0 20px 20px;
+    cursor: pointer;        
+}
+.bar{
+    height: 5px;
+    width: 100%;
+    background-color:  #FFB742;
+    display: block;
+    border-radius: 5px;
+    transition: 0.3s ease;
+}
+#bar1{
+    transform: translateY(-4px);
+}
+#bar3{
+    transform: translateY(4px);
+}
+.nav li a
+{
+    color: #fff;
+    text-decoration: none;
+}
+.nav li a:hover
+{
+    font-weight: bold;
+}
+.nav li
+{
+    list-style: none;
+    padding: 16px 0;
+}
+.nav
+{
+    padding: 0;
+    margin: 0 20px;
+    transition: 0.3s ease;
+    display: none;
+}
+.menu-bg, #menu-bar{
+    top:0;
+    left: 0;
+    position: absolute;
+}
+.menu-bg{
+    z-index: 10;
+    width: 0;
+    height: 0;
+    margin: 30px 0 20px 20px;
+    background: radial-gradient(circle,#FFB742, #FFB742);
+    border-radius: 50%;
+    transition: 0.3s ease;
+}
+#menu-bar{
+    z-index:2;
+
+}
+.change-bg
+{
+    width: 550px;
+    height: 540px;
+    transform: translate(-60%,-30%);
+}
+.change .bar{
+    background-color: white;
+}
+.change #bar1{
+    transform: translateY(4px) rotateZ(-45deg);
+}
+
+.change #bar3{
+    transform: translateY(-6px) rotate(45deg);
+}
+.change #bar2{
+    opacity: 0;
+}
+.change{
+    display: block;
+}
+    .container{
+    width: 100vw;
+    height: 100vh;
+    }
+    .box{
+    position: relative;
+    width: 40vw;
+    background-color: rgb(65, 65, 65);
+    border-radius: 10px;
+    padding: 3%;
+        left: 27vw;
+    text-align: center;
+    }
+
+.espacamentoTabela{
+    margin: 0 20px 50px 10px;
+}
+.espacamentoTabela2{
+    margin: 0 30px 50px 1px;
+}
+.espacamentoTabela3{
+    margin: 0 30px 20px 40px;
+}
+
+.espacamentoTabela4{
+    margin:5% auto 12% auto
+}
+
+
+.espacamentoTabela5{
+    margin:auto auto 8% auto
+}
+.title{
+    color: #fff;
+    text-align: center;
+    margin-top: 150px;
+}
+
+.subtitle{
+    color: #fff;
+    text-align: center;
+}
+.text1{
+    display: flex;
+    margin: 0 35px;
+}
+.text2{
+    display: flex;
+    margin: 0 60px;
+}
+.title-coins{
+    margin: 16px;
+    color: #FFB742; 
+    display: flex;
+}
+.title-coins2{
+    margin: 16px;
+    color: #FFB742; 
+    display: flex;
+    margin: 0 10px;
+}
+.txt1{
+    display: flex;
+    margin: 0 94px ;
+}
+.txt2{
+    display: flex;
+    margin: 0 0px;
+}
+.moedas{
+    color: #FFB742;  
+}
+.infos{
+    display: flex;
+    width: 40vw;
+}
+.indice{
+    color: #FFB742;
+}
+
+.indice2{
+    color: #FFB742;
+}
+.precos{
+    color: rgb(185, 185, 185);
+}
+.coin-name{
+    color: rgb(185, 185, 185);
+    text-align: left;
+    width: 6vw;
+}
+.coin-name2{
+    color: rgb(185, 185, 185);
+    text-align: left;
+    width: 7vw;
+    margin-left: 10%;
+}
+.precos2{
+    color: rgb(185, 185, 185);
+    margin-left: 5%;
+}
+.img{
+    height: 4vh;
+}
+
+.modal-button-quantity{
+    width: 1.8vw;
+    margin-bottom: 15%;
+    background-color: rgba(255, 255, 255, 0);
+    border-style: none;
+    font-size: larger;
+    cursor: pointer;
+    box-shadow: 2px 2px 3px #0000001c;
+    color: #2B2A2A;
+   
+    
+}
+
+.modal-button-quantity:hover{
+    background-color: #FFB742;
+    transition: calc(.1s);
+}
+
+.button-test{
+    width: 5vw;
+    height: 20vh;
+    background-color: #FFB742;
+    border-style: none;
+    cursor: pointer;
+    box-shadow: 2px 2px 5px;
+    
+}
+
+#modal-block{
+    width: 100vw;
+    position: fixed;
+    top: 5vh;
+    z-index: 999;
+    justify-content: center;
+}
+
+
+#modal-popup-page{
+    display: flex;
+    flex-direction: column;
+    padding: 2%;
+    background-color: #040404f5;
+    border-radius: 10px;
+    width: 30vw;
+    margin: 20vh auto ;
+
+}

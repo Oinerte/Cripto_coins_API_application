@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="myperfil.css">
+</head>
+<body>
+
+    <div id="menu-bar">
+        <div id="menu" onclick="onClickMenu()">
+            <div id="bar1" class="bar"></div>
+            <div id="bar2" class="bar"></div>
+            <div id="bar3" class="bar"></div>
+
+        </div>
+        <ul class="nav" id="nav">
+            <li><a href="http://127.0.0.1:5500/screens/index.html">Início</a></li>
+            <li><a href="#">Minha Carteira</a></li>
+            <li><a href="http://127.0.0.1:5500/screens/myPerfil.html#">Meu Perfil</a></li>
+        </ul>
+
+    </div>
+   <h1 id="MyUser-h1">MEU USUÁRIO</h1>
+   <div id="user-img-div"><img src="../assets/pessoa.png" alt="icone de uma pessoa" id="img-Person-MyUser"></div>
+
+   <h2 id="datas-person-Myuser">DADOS CADASTRAIS:</h2>
+
+   <div id="DataInformations-MyUser">
+    <p class="predata-MyUser" >NOME: <span class="recieveUserInformation-MyUser" id="name-MyUser">Maria Carda</span></p>
+    
+
+    <p class="predata-MyUser" >USUÁRIO: <span class="recieveUserInformation-MyUser" id="user-MyUser"></span></p>
+
+    <p class="predata-MyUser">UF: <span class="recieveUserInformation-MyUser" id="uf-MyUser"></span></p>
+
+    <p class="predata-MyUser">CEP: <span class="recieveUserInformation-MyUser" id="cep-MyUser"></span></p>
+
+    <p class="predata-MyUser">RUA: <span class="recieveUserInformation-MyUser" id="street-MyUser"></span></p>
+
+    <p class="predata-MyUser">NÚMERO RESIDÊNCIA: <span class="recieveUserInformation-MyUser" id="number-MyUser"></span></p>
+
+    <p class="predata-MyUser">BAIRRO: <span class="recieveUserInformation-MyUser" id="district-MyUser"></span></p>
+    
+
+    <p class="predata-MyUser" class="recieveUserInformation-MyUser" id="city-MyUser">CIDADE:</p>
+    
+   </div>
+
+   <div></div>
+</body>
+</html>
+<script src="../sripts/menu.js"></script>

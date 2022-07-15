@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="menu-bar">
+        <div id="menu" onclick="onClickMenu()">
+            <div id="bar1" class="bar"></div>
+            <div id="bar2" class="bar"></div>
+            <div id="bar3" class="bar"></div>
+
+        </div>
+        <ul class="nav" id="nav">
+            <li><a href="#">Início</a></li>
+            <li><a href="#">Minha Carteira</a></li>
+            <li><a href="#">Meu Perfil</a></li>
+        </ul>
+
+    </div>
+    <div id="container" class="container">
+        <h1 id="title" class="title"  class="img">Olá Fulano! 👋</h1>
+        </h1>
+        <h3 id="subtitle" class="subtitle">Vai um Bit?</h3>
+        <div id="box" class="box">
+            <div id="title-coins" class="title-coins">
+                <div id="text1" class="text1">
+                    <p> <strong>NOME</strong> </p>
+                </div>
+                <div id="text2" class="text2">
+                    <p> <strong>PREÇO</strong> </p>
+                </div>
+                <div class="title-coins2">
+                    <div id="txt1" class="txt1">
+                        <p> <strong>NOME</strong> </p>
+                    </div>
+                    <div id="txt2" class="txt2">
+                        <p> <strong>PREÇO</strong> </p>
+                    </div>
+                </div>
+            </div>
+            <div id="info" class="infos">
+                <div id="indice" class="indice espacamentoTabela">
+                    <p>1</p>
+                    <p>2</p>
+                    <p>3</p>
+                    <p>4</p>
+                    <p>5</p>
+                </div>
+                <div id="coin-name" class="coin-name espacamentoTabela">
+                    <p>BITCOIN</p>
+                    <p>ETHEREUM</p>
+                    <p>BUSD</p>
+                    <p>BNB</p>
+                    <p>BUSD</p>
+                </div>
+                <div id="precos" class="precos espacamentoTabela">
+                    <p id="homePage_bitcoin_price" onload="updatePrice('Bitcoin')"></p>
+                    <p id="homePage_ethereum_price" onload="updatePrice('Ethereum')"></p>
+                    <p id="homePage_tether_price" onload="updatePrice('Tether')"></p>
+                    <p id="homePage_usdcoin_price" onload="updatePrice('Usdcoin')"></p>
+                    <p id="homePage_bnb_price" onload="updatePrice('Bnb')"></p>
+                </div>
+
+
+                <div  class="espacamentoTabela5">
+                    <a href=""><button class="modal-button-quantity" onclick="openModal()">🛒</button></a>
+                    <a href=""><button class="modal-button-quantity" onclick="openModal()">🛒</button></a>
+                    <a href=""><button class="modal-button-quantity" onclick="openModal()">🛒</button></a>
+                    <a href=""><button class="modal-button-quantity" onclick="openModal()">🛒</button></a>
+                    <a href=""><button class="modal-button-quantity" onclick="openModal()">🛒</button></a>
+                </div>
+
+                <button onclick="updatePrice('Bitcoin')" class="button-test"> Testando funcion updatePrice</button>
+                <div class="text1">
+                    <div id="indice2" class="indice2 espacamentoTabela3">
+                        <p>6</p>
+                        <p>7</p>
+                        <p>8</p>
+                        <p>9</p>
+                        <p>10</p>
+                    </div>
+                    <div id="coin-name2" class="coin-name2 espacamentoTabela2">
+                        <p>BITCOIN</p>
+                        <p>ETHERUM</p>
+                        <p>BUSD </p>
+                        <p>BNB <img src="" alt=""></p>
+                        <p>BUSD <img src="" alt=""></p>
+                    </div>
+                    <div id="precos" class="precos2 espacamentoTabela2">
+                        <p>110.717,28BRL</p>
+                        <p>110.717,28BRL</p>
+                        <p>110.717,28BRL</p>
+                        <p>110.717,28BRL</p>
+                        <p>110.717,28BRL</p>
+                    </div>
+
+                    <div  class="espacamentoTabela4">
+                        <a href=""><button class="modal-button-quantity" onclick="openModal()">🛒</button></a>
+                        <a href=""><button class="modal-button-quantity" onclick="openModal()">🛒</button></a>
+                        <a href=""><button class="modal-button-quantity" onclick="openModal()">🛒</button></a>
+                        <a href=""><button class="modal-button-quantity" onclick="openModal()">🛒</button></a>
+                        <a href=""><button class="modal-button-quantity" onclick="openModal()">🛒</button></a>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+</div>
+</div>
+</div>
+
+<a href=""><button class="modal-button-quantity" onclick="openModal()">ADIDICONAR</button></a>
+
+<div id="modal-block">
+<div id="modal-popup-page">
+<h2 id="h2-popup-modal-title">Adicionando Moedas Na Carteira</h2>
+<h2 id="coin-Name-h2">BITCOIN</h2>
+<p id="text-for-modal">QUANTIDADE:</p>
+<input type="text" class="input-homePage-modal-uantity">
+</div>
+</div>
+
+</div>
+<script src="../../sripts/menu.js"></script>
+    <script src="../../sripts/menu.js"></script>
+</body>
+
+</html>
