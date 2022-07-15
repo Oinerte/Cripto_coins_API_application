@@ -1,0 +1,136 @@
+
+@font-face {
+    font-family: "inter";
+    src: url(Inter-VariableFont_slnt\,wght.ttf);
+}
+*{
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "inter";
+
+}
+
+body{
+    background-color: #212529;
+}
+
+#central-block{
+    background-color: #5f5f5f2a;
+    width: 90vw;
+    height: 90vh;
+    border-radius: 30px;
+    margin: 2.5% auto auto auto;
+}
+
+h1{
+    padding: 5% 2% 2%;
+    font-size: 2rem;
+    text-align: center;
+    color:#FFB742;
+    text-shadow: #1f1d1d 3px 1.5px;
+
+}
+
+
+.container {
+    width: 80%;
+    height: 80vh;
+    display: flex;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.212);
+}
+
+.form-image {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fde3a7d7;
+    padding: 1rem;
+}
+
+.form-image img {
+    width: 31rem;
+}
+
+.form {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    padding: 3rem;
+}
+
+
+.input-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 1rem 0;
+}
+
+.input-box {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.1rem;
+    width: 20vw;
+}
+
+.input-box input {
+    margin: 0.6rem 0;
+    padding: 0.8rem 1.2rem;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 1px 1px 6px #000000a1;
+    font-size: 0.8rem;
+    background-color: #bdbdbd57;
+    border-color: rgba(255, 255, 255, 0.247);
+}
+
+.input-box input:hover {
+    background-color: #fde69b98;
+}
+
+
+.input-box label{
+    font-size: 0.8rem;
+    color: #ffffffc0;
+    font-family: "inter";
+}
+
+.input-box input::placeholder {
+    color: #000000be;
+}
+
+#form-div{
+    padding-left: 10%;
+    padding-right: 10%;
+}
+#button-sigin{
+    margin-left: 10%;
+}
+#button{
+    width: 10vw;
+    height: 40px;
+    margin: 20% auto auto -20%;
+    border-radius: 10px;
+    border: none;
+    background-color: #FFB742;
+    color: #1f1d1d;
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.Writting-index,.p-insert{
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.89);
+    margin:auto auto 1.5% 0;
+}
+
+.span-sigin{
+    font-size: 1rem;
+    color: #FFB742;
+    margin-left: 5px;
+    
+}
