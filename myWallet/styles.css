@@ -1,15 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
-body{
-    background-color: #2B2A2A;
-    font-family: "Inter";
-    }
-    /* @font-face {
+    @font-face {
     font-family: "inter";
     src: url(Inter-VariableFont_slnt,wght.ttf);
-} */
+    }
+
 *{
     font-family: 'Inter', sans-serif;
 }
+
+body{
+    background-color: #212529;
+    }
+ 
+
 #menu{
     width: 35px;
     height: 30px;
@@ -103,8 +105,8 @@ body{
 .box{
     /* position: relative;
     left: 485px; */
-    width: 390px;
-    background-color: rgb(65, 65, 65);
+    width: 485;
+    background-color: rgba(65, 65, 65, 0.236);
     border-radius: 10px;
     padding: 25px 200px 18px 30px;
     margin: 3rem ;
@@ -131,17 +133,17 @@ body{
         margin: 0 10px 0 30px
     }
     .img{
-        height: 5vh;
+        height: 8vh;
     }
     .short-box{
         /* position: relative;
         left: 485px; */
-        width: 390px;
-        background-color: rgb(65, 65, 65);
+        width: 20vw;
+        background-color: rgba(65, 65, 65, 0.233);
         border-radius: 10px;
         padding: 10px 50px 12px 40px;
         margin: 2rem ;
-        text-align: center;
+        text-align: center;     
         display: flex;
         }
         .text{

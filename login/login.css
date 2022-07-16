@@ -1,6 +1,6 @@
 @font-face {
     font-family: "inter";
-    src: url(Inter-VariableFont_slnt\,wght.ttf);
+    src: url(../fonts/Inter-VariableFont_slnt\,wght.ttf)
 }
 *{
     padding: 0;
@@ -51,6 +51,7 @@ h1{
     color: #1f1d1d;
     font-size: 1.25rem;
     font-weight: bold;
+    cursor: pointer;
 }
 
 .Writting-index,.p-insert{
@@ -69,5 +70,13 @@ h1{
  
 }
 
+#h2-name-div{
+    margin: 8vh auto auto auto;
 
+}
 
+#h2-name-gbit{
+    color: #FFB742;
+    font-size: 1.8rem;
+    text-shadow: 4px 2px 2px #000000;
+}

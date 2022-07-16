@@ -2,28 +2,27 @@
     font-family: "inter";
     src: url(../../fonts/Inter-VariableFont_slnt\,wght.ttf);
 } 
-
-body{
-    background-color: #212529;
-    font-family: "Inter";
-    }
-
 *{
     font-family: 'Inter', sans-serif;
     
 }
 
-img{
-    display: inline;
-}
+body{
+    background-color: #212529;
+    }
 
+#menu-bar{
+    z-index:2;
+
+}
 
 #menu{
     width: 35px;
     height: 30px;
     margin: 30px 0 20px 20px;
-    cursor: pointer;        
+    cursor: pointer;
 }
+
 .bar{
     height: 5px;
     width: 100%;
@@ -38,6 +37,7 @@ img{
 #bar3{
     transform: translateY(4px);
 }
+
 .nav li a
 {
     color: #fff;
@@ -247,4 +247,16 @@ img{
     width: 30px;
     height: 30px;
     
+}
+
+#h2-name-div{
+    float: right;
+    margin-top: -17vh;
+    margin-right: 2.5vw;
+}
+
+#h2-name-gbit{
+    color: #ffa142;
+    font-size: 1.8rem;
+    text-shadow: 4px 2px 2px #000000;
 }
