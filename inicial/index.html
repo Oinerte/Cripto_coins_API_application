@@ -13,12 +13,13 @@
             let valor = document.querySelector('#modal-quantity-'+id).value
             let coinName = document.querySelector('#coinName-'+id).value
             let coinPrice = document.querySelector('#homePage_coin_price-'+id).value
-            console.log(document.querySelector('#homePage_coin_price-'+id).value);
+            console.log(document.querySelector('#homePage_coin_price-'+id).value)
             let body = {
-                        username:user,
+                        username:'rafa',
                         coin:coinName,
                         amount:valor
                     }
+            console.log(body);
             if(valor == '<empty string>'){
                 alert('quantidade inválida')
             }else{

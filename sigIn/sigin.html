@@ -64,10 +64,8 @@
                 <div id="button-sigin"><a href=""><button id="button">CADASTRAR</button></a></div>
 
 
-                <h2 class="Writting-index">JÁ TERMINOU?<span><a href="http://127.0.0.1:5500/Gbit/login/login.html" class="span-sigin">ENTRAR</a></span></h2> 
+                <h2 class="Writting-index">JÁ TERMINOU?<span><a href="http://127.0.0.1:5500/login/login.html" class="span-sigin">ENTRAR</a></span></h2> 
             </div>
-
-
         </form>
     </div> 
     <script type="module">
@@ -81,8 +79,56 @@
         document.querySelector('#button').addEventListener('click',()=>{
             registerUser(inputs)
         })
+        document.querySelector('#username').addEventListener('blur',()=>{
+            fetch('https://musicapig.herokuapp.com/users/names',{
+                headers:{
+                'Content-Type':"application/json"
+                },
+                method:'POST',
+                body:JSON.stringify({
+                    username: document.querySelector('#username').value
+                })
+            }).then(response => verificaLogin(response)) 
+    })
+    async function verificaLogin(response){
+        const { message } =  await response.json()
+        const { status } = response
 
+        if(status == 500){
+            alert(`erro no servidor: ${message}`)
+        }else if(status == 401){
+            alert(message)  
+        }else if(status == 200){
+            alert (message)
+        }
+    }
+    document.querySelector('#input-passwd2').addEventListener('blur',()=>{
+        if(document.querySelector('#input-passwd2').value != document.querySelector('#senha').value){
+            alert('as senhas não batem')
+        }
+    })
+    document.querySelector('#button').addEventListener('click',()=>{
+        let laranja = { 
+            nome : document.querySelector('#nome').value,
+            username : document.querySelector('#username').value,
+            senha : document.querySelector('#senha').value,
+            senha2:document.querySelector('#input-passwd2').value,
+            cep : document.querySelector('#cep').value,
+            rua: document.querySelector('#rua').value,
+            uf :  document.querySelector('#uf').value,
+            bairro:  document.querySelector('#bairro').value,
+            cidade:  document.querySelector('#cidade').value
+        }
+        console.log(laranja);
+        for(let i = 0; i < laranja.lenght; i ++){
+            if(laranja[i] == ""){
+                alert('tem certeza que preeencheu tudo?')
+            }else{
+                registerUser(laranja)
+            }
+        }
 
+    })
     </script>
 </body>
 </html>
