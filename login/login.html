@@ -50,7 +50,7 @@
                 username:name,
                 password:password
             })
-        }).then(response => verificaLogin(response)) //response não está definida   
+        }).then(response => verificaLogin(response)) 
     })
     async function verificaLogin(response){
         const { message } =  await response.json()
@@ -64,14 +64,8 @@
             alert(message)
         }else if(status == 200){
             alert (message)
-            window.location.href = "http://127.0.0.1:5500/index.html"
+            window.location.href = "http://127.0.0.1:5500/Gbit/inicial/index.html"
         }
-/*         if(resposta.log == 'user confimed'){
-            alert('usuario confirmado')
-            window.location.href = "http://127.0.0.1:5500/index.html"
-        }else{
-            alert('usuário não encontrado')
-        } */
     }
 </script>
 </body>

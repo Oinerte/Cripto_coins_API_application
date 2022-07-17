@@ -3,9 +3,9 @@ function registerUser(register){
 /*     console.log(register); */
     fetch('https://musicapig.herokuapp.com/users/names',{
         method:'POST',
-        body:{
+        body:JSON.stringify({
             username:register.username
-        }
+        })
 
     }).then(response => response.json())
             .then(response => ()=>{
