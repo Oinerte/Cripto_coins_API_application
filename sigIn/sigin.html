@@ -46,7 +46,7 @@
 
                 <div class="input-box">
                     <label>INSIRA UMA SENHA:</label>
-                    <input id="senha" type="password"   required>
+                    <input id="senha" type="text"   required>
                 </div>
                 <div class="input-box">
                     <label >NÚMERO RESIDÊNCIA:</label>
@@ -58,10 +58,10 @@
                 </div>
                 <div class="input-box">
                     <label >INSIRA A SENHA NOVAMENTE:</label>
-                    <input id="input-passwd2" type="password" name="password"  required>
+                    <input id="input-passwd2" type="text" name="password"  required>
                 </div>
 
-                <div id="button-sigin"><a href=""><button id="button" onblur="registerUser(inputs)">CADASTRAR</button></a></div>
+                <div id="button-sigin"><a href=""><button id="button">CADASTRAR</button></a></div>
 
 
                 <h2 class="Writting-index">JÁ TERMINOU?<span><a href="http://127.0.0.1:5500/login/login.html" class="span-sigin">ENTRAR</a></span></h2> 
@@ -71,12 +71,16 @@
         </form>
     </div> 
     <script type="module">
+        import { registerUser } from './cadastro.js'
         import {pesquisacep} from './cep.js'
+        let inputs = {nome:document.querySelector('#nome').value,cep:document.querySelector('#cep').value,uf:document.querySelector('#uf').value,username:document.querySelector('#username').value,rua:document.querySelector('#rua').value,cidade:document.querySelector('#cidade').value,senha:document.querySelector('#senha').value,numero:document.querySelector('#numero').value,bairro:document.querySelector('#bairro').value}
         document.querySelector('#cep').addEventListener('blur', (event)=>{
             let input = document.querySelector('#cep')
             pesquisacep(input.value)
         })
-        let inputs = {nome:nome.value,cep:cep.value,uf:uf.value,username:username.value,rua:rua.value,cidade:cidade.value,senha:senha.value,numero:numero.value,bairro:bairro.value}
+        document.querySelector('#button').addEventListener('click',()=>{
+            registerUser(inputs)
+        })
 
     </script>
 </body>

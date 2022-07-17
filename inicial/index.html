@@ -7,6 +7,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <script>
+        function compraBit(id){
+            alert('rafa linda')
+            let valor = document.querySelector('#modal-quantity-'+id).value
+            let coinName = document.querySelector('#coinName-'+id).value
+            let coinPrice = document.querySelector('#homePage_coin_price-'+id).value
+            console.log(document.querySelector('#homePage_coin_price-'+id).value);
+            let body = {
+                        username:user,
+                        coin:coinName,
+                        amount:valor
+                    }
+            if(valor == '<empty string>'){
+                alert('quantidade inválida')
+            }else{
+            console.log(body);
+                fetch(url,{
+                    method:'POST',
+                    body:body
+                })
+            }
+        }
+    </script>
 </head>
 
 <body>
@@ -50,32 +73,32 @@
                             
                             
                         <div id="coin-name" class="coin-name espacamentoTabela">
-                            <p>BITCOIN</p>
-                            <p>ETHEREUM</p>
-                            <p>TETHER</p>
-                            <p>BNB</p>
-                            <p>BUSD</p>
+                            <p id="coinName-1">BITCOIN</p>
+                            <p id="coinName-2">ETHEREUM</p>
+                            <p id="coinName-3">TETHER</p>
+                            <p id="coinName-4">BNB</p>
+                            <p id="coinName-5">BUSD</p>
                         </div>
                         <div id="precos" class="precos espacamentoTabela">
-                            <p id="homePage_bitcoin_price">?????????????????</p>
-                            <p id="homePage_ethereum_price">?????????????????</p>
-                            <p id="homePage_tether_price">?????????????????</p>
-                            <p id="homePage_usdcoin_price">????????????????</p>
-                            <p id="homePage_bnb_price">?????????????????</p>
+                            <p id="homePage_coin_price-1">?????????????????</p>
+                            <p id="homePage_coin_price-2">?????????????????</p>
+                            <p id="homePage_coin_price-3">?????????????????</p>
+                            <p id="homePage_coin_price-4">????????????????</p>
+                            <p id="homePage_coin_price-5">?????????????????</p>
                         </div>
                         <div  class="espacamentoTabela6">
-                            <input type="text" class="input-modal" id="modal-quantity-bit">
-                            <input type="text" class="input-modal" id="modal-quantity-">
-                            <input type="text"  class="input-modal" id="modal-quantity-">
-                            <input type="text"  class="input-modal" id="modal-quantity-">
-                            <input type="text"  class="input-modal" id="modal-quantity-">
+                            <input type="number" class="input-modal" id="modal-quantity-1">
+                            <input type="number" class="input-modal" id="modal-quantity-2">
+                            <input type="number"  class="input-modal" id="modal-quantity-3">
+                            <input type="number"  class="input-modal" id="modal-quantity-4">
+                            <input type="number"  class="input-modal" id="modal-quantity-5">
                         </div>
                         <div  class="espacamentoTabela5">
-                            <a href=""><button class="modal-button-quantity"">🛒</button></a>
-                            <a href=""><button class="modal-button-quantity"">🛒</button></a>
-                            <a href=""><button class="modal-button-quantity"">🛒</button></a>
-                            <a href=""><button class="modal-button-quantity"">🛒</button></a>
-                            <a href=""><button class="modal-button-quantity"">🛒</button></a>
+                            <button id="buybtn1"class="modal-button-quantity"onclick="compraBit('1')">🛒</button>
+                            <button id="buybtn2"class="modal-button-quantity"onclick="compraBit('2')">🛒</button>
+                            <button id="buybtn3"class="modal-button-quantity"onclick="compraBit('3')">🛒</button>
+                            <button id="buybtn4"class="modal-button-quantity"onclick="compraBit('4')">🛒</button>
+                            <button id="buybtn5"class="modal-button-quantity"onclick="compraBit('5')">🛒</button>
                         </div>
                     
                 </div>
@@ -96,32 +119,32 @@
                                 <img src="" alt="" id="img10"class="svg-icon">
                             </div>
                         <div id="coin-name2" class="coin-name2 espacamentoTabela2">
-                             <p>XRP</p>
-                             <p>CARDANO</p>
-                            <p>SOLANA</p>
-                            <p>HEX
-                             <p>DOGECOIN </p>
+                            <p id="coinName-6">XRP</p>
+                            <p id="coinName-7">CARDANO</p>
+                            <p id="coinName-8">SOLANA</p>
+                            <p id="coinName-9">HEX
+                            <p id="coinName-10">DOGECOIN </p>
                         </div>
                         <div id="precos" class="precos2 espacamentoTabela2">
-                            <p id="moeda6">?????????????????</p>
-                            <p id="moeda7">?????????????????</p>
-                            <p id="moeda8">?????????????????</p>
-                            <p id="moeda9">?????????????????</p>
-                            <p id="moeda10">?????????????????</p>
+                            <p id="homePage_coin_price-6">?????????????????</p>
+                            <p id="homePage_coin_price-7">?????????????????</p>
+                            <p id="homePage_coin_price-8">?????????????????</p>
+                            <p id="homePage_coin_price-9">?????????????????</p>
+                            <p id="homePage_coin_price-10">?????????????????</p>
                         </div>
                         <div  class="espacamentoTabela6">
-                            <input type="text" class="input-modal" id="modal-quantity-bit">
-                            <input type="text" class="input-modal" id="modal-quantity-">
-                            <input type="text"  class="input-modal" id="modal-quantity-">
-                            <input type="text"  class="input-modal" id="modal-quantity-">
-                            <input type="text"  class="input-modal" id="modal-quantity-">
+                            <input type="number" class="input-modal" id="modal-quantity-6">
+                            <input type="number" class="input-modal" id="modal-quantity-7">
+                            <input type="number"  class="input-modal" id="modal-quantity-8">
+                            <input type="number"  class="input-modal" id="modal-quantity-9">
+                            <input type="number"  class="input-modal" id="modal-quantity-10">
                         </div>
                         <div  class="espacamentoTabela4">
-                            <a href=""><button class="modal-button-quantity" ">🛒</button></a>
-                            <a href=""><button class="modal-button-quantity" ">🛒</button></a>
-                            <a href=""><button class="modal-button-quantity" ">🛒</button></a>
-                            <a href=""><button class="modal-button-quantity" ">🛒</button></a>
-                            <a href=""><button class="modal-button-quantity" ">🛒</button></a>
+                            <button id="buybtn6"class="modal-button-quantity"onclick="compraBit('6')">🛒</button>
+                            <button id="buybtn7"class="modal-button-quantity"onclick="compraBit('7')">🛒</button>
+                            <button id="buybtn8"class="modal-button-quantity"onclick="compraBit('8')">🛒</button>
+                            <button id="buybtn9"class="modal-button-quantity"onclick="compraBit('9')">🛒</button>
+                            <button id="buybtn10"class="modal-button-quantity"onclick="compraBit('10')">🛒</button>
                         </div>
                 
                     </div>
@@ -136,19 +159,19 @@
     <script type="module">
         import { coinsInformation } from './bits.js'
         window.onload = ()=>{
-            coinsInformation().then(response => response.json()).then(response => slapora(response))
+            coinsInformation().then(response => response.json()).then(response => update(response))
         }
-    function slapora (arr){
-        document.querySelector('#homePage_bitcoin_price').innerHTML = arr[0].price
-        document.querySelector('#homePage_ethereum_price').innerHTML = arr[1].price
-        document.querySelector('#homePage_tether_price').innerHTML = arr[2].price
-        document.querySelector('#homePage_usdcoin_price').innerHTML = arr[3].price
-        document.querySelector('#homePage_bnb_price').innerHTML = arr[4].price
-        document.querySelector('#moeda6').innerHTML = arr[6].price
-        document.querySelector('#moeda7').innerHTML = arr[7].price
-        document.querySelector('#moeda8').innerHTML = arr[8].price
-        document.querySelector('#moeda9').innerHTML = arr[9].price
-        document.querySelector('#moeda10').innerHTML = arr[10].price
+    function update (arr){
+        document.querySelector('#homePage_coin_price-1').innerHTML = arr[0].price
+        document.querySelector('#homePage_coin_price-2').innerHTML = arr[1].price
+        document.querySelector('#homePage_coin_price-3').innerHTML = arr[2].price
+        document.querySelector('#homePage_coin_price-4').innerHTML = arr[3].price
+        document.querySelector('#homePage_coin_price-5').innerHTML = arr[4].price
+        document.querySelector('#homePage_coin_price-6').innerHTML = arr[6].price
+        document.querySelector('#homePage_coin_price-7').innerHTML = arr[7].price
+        document.querySelector('#homePage_coin_price-8').innerHTML = arr[8].price
+        document.querySelector('#homePage_coin_price-9').innerHTML = arr[9].price
+        document.querySelector('#homePage_coin_price-10').innerHTML = arr[10].price
         document.querySelector('#img1').setAttribute('src', arr[0].iconUrl)
         document.querySelector('#img2').setAttribute('src', arr[1].iconUrl)
         document.querySelector('#img3').setAttribute('src', arr[2].iconUrl)
