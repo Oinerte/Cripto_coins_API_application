@@ -1,15 +1,16 @@
 import { User } from "./user.js";
 function registerUser(register){
-    console.log(register);
+/*     console.log(register); */
     fetch('https://musicapig.herokuapp.com/users/names',{
         method:'POST',
         body:{
-            username:register.nome
+            username:register.username
         }
+
     }).then(response => response.json())
-        .then(response => ()=>{
+            .then(response => ()=>{
             if(response.log == 'this name is been used'){
-                alert('this name is been used')
+                alert('Esse usuário já está sendo usado')
             }else{
                 let url = 'https://musicapig.herokuapp.com/users'
                 let user = new User(register.nome, register.username, register.senha, register.cep, 
@@ -35,8 +36,8 @@ function registerUser(register){
                         "city":city
                     }
                 })
-                alert('usuário registrado')
-                window.location.href = "http://127.0.0.1:5500/inicial/index.html"
+                .then(alert('usuário registrado'))
+    
             }
         })
 

@@ -73,14 +73,15 @@
     <script type="module">
         import { registerUser } from './cadastro.js'
         import {pesquisacep} from './cep.js'
-        let inputs = {nome:document.querySelector('#nome').value,cep:document.querySelector('#cep').value,uf:document.querySelector('#uf').value,username:document.querySelector('#username').value,rua:document.querySelector('#rua').value,cidade:document.querySelector('#cidade').value,senha:document.querySelector('#senha').value,numero:document.querySelector('#numero').value,bairro:document.querySelector('#bairro').value}
+        let inputs = {nome:document.getElementById('nome').value,cep:document.getElementById('cep').value,uf:document.getElementById('uf').value,username:document.getElementById('username').value,rua:document.getElementById('rua').value,cidade:document.getElementById('cidade').value,senha:document.getElementById('senha').value,numero:document.getElementById('numero').value,bairro:document.getElementById('bairro').value}
         document.querySelector('#cep').addEventListener('blur', (event)=>{
-            let input = document.querySelector('#cep')
+            let input = document.getElementById('cep')
             pesquisacep(input.value)
         })
         document.querySelector('#button').addEventListener('click',()=>{
             registerUser(inputs)
         })
+
 
     </script>
 </body>

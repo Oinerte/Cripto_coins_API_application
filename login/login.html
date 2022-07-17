@@ -36,9 +36,9 @@
    </div>
 
     <script>
-    document.querySelector('#button').addEventListener('click',()=>{
-            let name = document.querySelector('#input-nome-login').value
-        let password = document.querySelector('#input-user-login').value
+    document.getElementById('button').addEventListener('click',()=>{
+            let name = document.getElementById('input-nome-login').value
+        let password = document.getElementById('input-user-login').value
         fetch('https://musicapig.herokuapp.com/users/login',{
             method:'POST',
             body:{
@@ -46,7 +46,7 @@
                 password:password
             }
         }).then(response => response.json())
-          .then(response => verificaLogin(response))
+          .then(err,response => verificaLogin(response)) //response não está definida   
     })
     function verificaLogin(resposta){
         if(resposta.log == 'user confimed'){
