@@ -1,30 +1,24 @@
 import { User } from "./user.js";
 function registerUser(register) {
+console.log('js:'+register);
+   
     let url = 'https://musicapig.herokuapp.com/users'
-    let user = new User(register.nome, register.username, register.senha, register.cep,
-        register.rua, register.numero, register.uf, register.bairro, register.cidade)
-    let username = user.nome
-    let passwd = user.password
-    let cep = user.cep
-    let rua = user.rua
-    let numero = user.numero
-    let uf = user.uf
-    let bairro = user.bairro
-    let city = user.cidade
     fetch(url, {
         method: "POST",
-        body: {
-            "username": username,
-            "password_user": passwd,
-            "cep": cep,
-            "user_address": rua,
-            "house_number": numero,
-            "uf": uf,
-            "disctrict": bairro,
-            "city": city
-        }
+        headers:{
+            'Content-Type':"application/json"
+        },
+        body:JSON.stringify({
+            "name": register.username, 
+            "password_user":register.senha, 
+            "cep":register.cep,
+            "user_address": register.rua,
+            "house_number": register.numero,
+            "uf": register.uf,
+            "district": register.bairro, 
+            "city": register.cidade
+        })
     }).then(alert('usuário registrado'))
-
 }
 
 export { registerUser }

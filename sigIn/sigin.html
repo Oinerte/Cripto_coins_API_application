@@ -108,26 +108,17 @@
         }
     })
     document.querySelector('#button').addEventListener('click',()=>{
-        let laranja = { 
-            nome : document.querySelector('#nome').value,
-            username : document.querySelector('#username').value,
-            senha : document.querySelector('#senha').value,
-            senha2:document.querySelector('#input-passwd2').value,
-            cep : document.querySelector('#cep').value,
-            rua: document.querySelector('#rua').value,
-            uf :  document.querySelector('#uf').value,
-            bairro:  document.querySelector('#bairro').value,
-            cidade:  document.querySelector('#cidade').value
+        let laranja = {             
+            username:document.querySelector('#username').value,
+            senha:document.querySelector('#senha').value,
+            cep:document.querySelector('#cep').value,
+            rua:document.querySelector('#rua').value,
+            uf:document.querySelector('#uf').value,
+            bairro:document.querySelector('#bairro').value,
+            cidade:document.querySelector('#cidade').value
         }
-        console.log(laranja);
-        for(let i = 0; i < laranja.lenght; i ++){
-            if(laranja[i] == ""){
-                alert('tem certeza que preeencheu tudo?')
-            }else{
-                registerUser(laranja)
-            }
-        }
-
+        console.log('html:'+laranja)
+        registerUser(laranja)
     })
     </script>
 </body>

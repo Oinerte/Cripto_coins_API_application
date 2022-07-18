@@ -9,13 +9,12 @@
     <link rel="stylesheet" href="style.css">
     <script>
         function compraBit(id){
-            alert('rafa linda')
             let valor = document.querySelector('#modal-quantity-'+id).value
             let coinName = document.querySelector('#coinName-'+id).value
             let coinPrice = document.querySelector('#homePage_coin_price-'+id).value
             console.log(document.querySelector('#homePage_coin_price-'+id).value)
             let body = {
-                        username:'rafa',
+                        username:localStorage.getItem('username'),
                         coin:coinName,
                         amount:valor
                     }
@@ -24,8 +23,11 @@
                 alert('quantidade inválida')
             }else{
             console.log(body);
-                fetch(url,{
+                fetch('https://musicapig.herokuapp.com/addCoin',{
                     method:'POST',
+                    headers:{
+                        'Content-Type':"application/json"
+                    },
                     body:body
                 })
             }
@@ -74,11 +76,11 @@
                             
                             
                         <div id="coin-name" class="coin-name espacamentoTabela">
-                            <p id="coinName-1">BITCOIN</p>
-                            <p id="coinName-2">ETHEREUM</p>
-                            <p id="coinName-3">TETHER</p>
-                            <p id="coinName-4">BNB</p>
-                            <p id="coinName-5">BUSD</p>
+                            <p id="coinName-1">COINNAME</p>
+                            <p id="coinName-2">COINNAME</p>
+                            <p id="coinName-3">COINNAME</p>
+                            <p id="coinName-4">COINNAME</p>
+                            <p id="coinName-5">COINNAME</p>
                         </div>
                         <div id="precos" class="precos espacamentoTabela">
                             <p id="homePage_coin_price-1">?????????????????</p>
@@ -120,11 +122,11 @@
                                 <img src="" alt="" id="img10"class="svg-icon">
                             </div>
                         <div id="coin-name2" class="coin-name2 espacamentoTabela2">
-                            <p id="coinName-6">XRP</p>
-                            <p id="coinName-7">CARDANO</p>
-                            <p id="coinName-8">SOLANA</p>
-                            <p id="coinName-9">HEX
-                            <p id="coinName-10">DOGECOIN </p>
+                            <p id="coinName-6">COINNAME</p>
+                            <p id="coinName-7">COINNAME</p>
+                            <p id="coinName-8">COINNAME</p>
+                            <p id="coinName-9">COINNAME</p>
+                            <p id="coinName-10">COINNAME</p>
                         </div>
                         <div id="precos" class="precos2 espacamentoTabela2">
                             <p id="homePage_coin_price-6">?????????????????</p>
@@ -163,6 +165,16 @@
             coinsInformation().then(response => response.json()).then(response => update(response))
         }
     function update (arr){
+        document.querySelector('#coinName-1').innerHTML =  arr[0].name
+        document.querySelector('#coinName-2').innerHTML =  arr[1].name
+        document.querySelector('#coinName-3').innerHTML =  arr[2].name
+        document.querySelector('#coinName-4').innerHTML =  arr[3].name
+        document.querySelector('#coinName-5').innerHTML =  arr[4].name
+        document.querySelector('#coinName-6').innerHTML =  arr[6].name
+        document.querySelector('#coinName-7').innerHTML =  arr[7].name
+        document.querySelector('#coinName-8').innerHTML =  arr[8].name
+        document.querySelector('#coinName-9').innerHTML =  arr[9].name
+        document.querySelector('#coinName-10').innerHTML =  arr[10].name
         document.querySelector('#homePage_coin_price-1').innerHTML = arr[0].price
         document.querySelector('#homePage_coin_price-2').innerHTML = arr[1].price
         document.querySelector('#homePage_coin_price-3').innerHTML = arr[2].price
@@ -183,6 +195,7 @@
         document.querySelector('#img8').setAttribute('src', arr[8].iconUrl)
         document.querySelector('#img9').setAttribute('src', arr[9].iconUrl)
         document.querySelector('#img10').setAttribute('src', arr[10].iconUrl)
+        document.querySelector('#title').innerHTML('Olá,', localStorage.getItem('username'), '👋')
     }
     </script>
 </body>

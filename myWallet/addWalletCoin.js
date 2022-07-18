@@ -12,16 +12,16 @@ function popopo (response){
     let coinSection = document.createElement('div')
     coinSection.setAttribute('class', 'coinSection')
 
-    // let coinIcon = document.createElement('img')
-    // coinIcon.setAttribute('src', response.iconUrl)
-    // coinIcon.setAttribute('class', 'coinIcon')
+    let coinIcon = document.createElement('img')
+    coinIcon.setAttribute('src', response.iconUrl)
+    coinIcon.setAttribute('class', 'coinIcon')
 
     let coinText = document.createElement('p')
     let node = document.createTextNode(`Você comprou R$${response.price * 5.5 } em ${response.name}`)
     coinText.appendChild(node)
     coinText.setAttribute('class', 'coinText')
 
- //   coinSection.appendChild(coinIcon)
+    coinSection.appendChild(coinIcon)
     coinSection.appendChild(coinText)
     wallet.appendChild(coinSection)
 }
